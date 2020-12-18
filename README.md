@@ -82,6 +82,9 @@ email Brian Sturgis @ <sturujisu@gmail.com>
 | test:  
 | Assert.AreEqual(typeof(userNewParcel(newDimensions, newWeight)), userNewParcel(Parcel newParcelVolume(length * width * height)));
 
+
+
+
 Parcel_DeterminePriceOfParcel_CostToShip(); |  |
 | ------| -----------|
 | test: |                   |
