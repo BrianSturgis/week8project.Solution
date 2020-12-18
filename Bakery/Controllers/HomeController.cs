@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+using Bakery.Models;
 namespace Bakery.Controllers
 {
   public class HomeController : Controller
@@ -11,6 +11,12 @@ namespace Bakery.Controllers
     public string Goodbye() { return "ciao"; }
 
     [Route("/")]
-    public ActionResult Form() { return View(); }
+    public ActionResult Form()
+    {
+      FormVariable myFormVariable = new FormVariable();
+      myFormVariable.Recipient = "Lina";
+      myFormVariable.Sender = "Jasmine";
+      return View(myFormVariable);
+    }
   }
 }
