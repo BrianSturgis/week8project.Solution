@@ -60,6 +60,43 @@ email Brian Sturgis @ <sturujisu@gmail.com>
 
 ## TESTS
 
+## TESTS
+
+| Parcel_CreateNewConstructorObject_Parcel(); |  |
+| ------| -----------|
+| test:  
+| Assert.AreEqual(typeof(Parcel), newParcel);
+
+| Parcel_CreateNewParcelObject_Parcel(dimensions, weight); |  |
+| ------| -----------|
+| test:  
+| Assert.AreEqual(typeof(Parcel), newParcel(_dimensions, _weight));
+
+| Parcel_CreateFormWithUserInputInstantiatingNewParcel_Parcel(dimensions, weight); |  |
+| ------| -----------|
+| test:  
+| Assert.AreEqual(typeof(userNewParcel(newDimensions, newWeight)), userNewParcel(Parcel newParcel(userDimensions, userWeight)));
+
+| Parcel_DetermineParcelVolumeOfRectangularPrism_Volume(dimensions, weight); |  |
+| ------| -----------|
+| test:  
+| Assert.AreEqual(typeof(userNewParcel(newDimensions, newWeight)), userNewParcel(Parcel newParcelVolume(length * width * height)));
+
+Parcel_DeterminePriceOfParcel_CostToShip(); |  |
+| ------| -----------|
+| test: |                   |
+|if (weight < 1 lb)
+  return $2.74 * weight
+else (weight > 1 lb)
+  return $7.02 * weight   
+| expect: | (newParcel.CostToShip((dimensions, weight))).toEqual(newParcel($XY)). |
+
+| Parcel_DisplayFormWithParcelArguments_Parcel(dimensions, weight, cost); |  |
+| ------| -----------|
+| test:  
+| expect: | (newParcel.CostToShip($XY)).toDisplay(UI);
+
+
 
 
 |  |  |
