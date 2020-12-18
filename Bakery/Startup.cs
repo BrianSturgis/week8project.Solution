@@ -35,4 +35,6 @@ namespace Bakery
       {
         await context.Response.WriteAsync("Hello World!");
       });
+    }
+  }
 }
