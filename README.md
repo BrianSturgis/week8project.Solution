@@ -62,13 +62,13 @@ email Brian Sturgis @ <sturujisu@gmail.com>
 
 
 
-| Bread_Object_Bread; |  |
+|  |  |
 | ------| -----------|
 | test:  should create an instance of Bread 
 | Assert.AreEqual(typeof(Pastry), newPastry);
 
 
-Bread_BreadQuantity_Int; |  |
+ |  |
 | ------| -----------|
 | test: | newBread.Quantity                       |
 |  
