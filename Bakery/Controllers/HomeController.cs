@@ -11,6 +11,6 @@ namespace Bakery.Controllers
     public string Goodbye() { return "ciao"; }
 
     [Route("/")]
-    public string Letter() { return "this will be the order form"; }
+    public ActionResult Form() { return View(); }
   }
 }
