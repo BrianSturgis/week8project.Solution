@@ -1,14 +1,31 @@
+using System.Collections.Generic;
 
-
-using System;
-
-class DoubleIt
+namespace BakeryAdmin.Models
 {
-  static void Pain()
+  public class Order
   {
-    Console.WriteLine("How old are you?");
-    string stringUserAge = Console.ReadLine();
-    int intUserAge = int.Parse(stringUserAge);
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public string Price { get; set; }
+    public string Date { get;set; }
+
+    public int Id {get;}
+
+
+    private static List<Order> _instances = new List<Order> { };
+
+    public Order(string name,string description,string price,string date)
+    {
+      Name = name;
+      Description = description;
+      Price = price;
+      Date = date;
+    
+      _instances.Add(this);
+      Id = _instances.Count;
+    }
+
+    
+
   }
 }
-
