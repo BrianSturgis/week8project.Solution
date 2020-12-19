@@ -18,5 +18,7 @@ namespace Bakery.Controllers
       myFormVariable.Sender = "Jasmine";
       return View(myFormVariable);
     }
+    [Route("/form1")]
+    public ActionResult Form1() { return View(); }
   }
 }
