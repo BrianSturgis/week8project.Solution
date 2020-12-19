@@ -5,7 +5,7 @@ namespace Bakery.Controllers
   public class HomeController : Controller
   {
   
-    [Route("/")]
+    [HttpGet("/")]
     public ActionResult Form()
     {
       FormVariable myFormVariable = new FormVariable();
@@ -13,7 +13,9 @@ namespace Bakery.Controllers
       myFormVariable.Sender = "Jasmine";
       return View(myFormVariable);
     }
-    [Route("/form1")]
+    [HttpGet("/form1")]
     public ActionResult Form1() { return View(); }
+    // [HttpGet("/form1")]
+    // public ActionResult Form1() { return View(); }
   }
 }
