@@ -76,7 +76,18 @@ namespace BakeryAdmin.Tests
       //Assert
       CollectionAssert.AreEqual(newOrder, result);
     }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      
+      Order newOrder = new Order("1","1","1");
 
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
     
   }
 }
