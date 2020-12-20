@@ -58,7 +58,7 @@ namespace BakeryAdmin.Tests
       List<Order> result = Order.GetAll();
 
       // Assert
-      CollectionAssert.AreEqual(newOrder, 1);
+      CollectionAssert.AreEqual(newOrder, result);
     }
   }
 }
