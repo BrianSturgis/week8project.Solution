@@ -60,13 +60,13 @@ namespace BakeryAdmin.Tests
       // Assert
       CollectionAssert.AreEqual(newOrder, result);
     }
-
+    
     [TestMethod]
     public void GetAll_ReturnsOrders_OrderList()
     {
       //Arrange
       
-      Order newOrder1 = new Order("a","b","c");
+      Order newOrder1 = new Order("a","b","c","d");
       Order newOrder2 = new Order("a","b","c","d");
       List<Order> newOrder = new List<Order> { newOrder1, newOrder2 };
 
