@@ -21,8 +21,8 @@ namespace BakeryAdmin.Tests
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
-      string name = "Test Category";
-      string description = "string";
+      string name = "name";
+      string description = "description";
       Vendor newVendor = new Vendor(name, description);
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
