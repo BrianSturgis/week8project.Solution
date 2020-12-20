@@ -5,10 +5,20 @@ using System;
 
 namespace BakeryAdmin.Tests
 {
-  // [TestClass]
-  // public class OrderTest : IDisposable
-  // {
+  [TestClass]
+  public class OrderTest : IDisposable
+  {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("2","3","4");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
     
-  // }
+  }
 }

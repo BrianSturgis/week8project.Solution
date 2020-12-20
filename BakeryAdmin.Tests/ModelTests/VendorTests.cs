@@ -51,7 +51,19 @@ namespace BakeryAdmin.Tests
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
-    
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      
+      string name01 = "Greetings";
+      string answer = "Fellow";
+      string name02 = "Programs";
+      Vendor newVendor1 = new Vendor(name01,answer);
+      Vendor newVendor2 = new Vendor(name02,answer);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
+    }
+
 
 
 
