@@ -48,6 +48,5 @@ namespace BakeryAdmin.Tests
       Assert.AreEqual(updatedDescription, result);
     }
 
-
   }
 }
