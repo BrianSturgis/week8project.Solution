@@ -32,7 +32,21 @@ namespace BakeryAdmin.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+  [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "1";
+      Order newItem = new Order("1","2","3","4");
 
+      //Act
+      string updatedDescription = "Greetings Programs";
+      newItem.Description = updatedDescription;
+      string result = newItem.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
 
 
   }
