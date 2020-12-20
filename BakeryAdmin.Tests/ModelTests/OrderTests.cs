@@ -23,7 +23,7 @@ namespace BakeryAdmin.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
-      string description = "21";
+      string description = "2";
 
       //Act
       Order newOrder = new Order("1","2","3","4");
