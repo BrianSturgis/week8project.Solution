@@ -39,16 +39,16 @@ namespace BakeryAdmin.Controllers
     }
 
     // This one creates new Items within a given Category, not new Categories:
-    [HttpPost("/vendors/{vendorId}/order")]
-    public ActionResult Create(int vendorId, string orderDescription)
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderName, string orderDescription, string orderPrice, string orderDate)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderDescription, "1","1","1");
+      Order newOrder = new Order(orderName, orderDescription, orderPrice, orderDate);
       foundVendor.AddOrder(newOrder);
-      List<Order> vendorOrders = foundVendor.Orders;
-      model.Add("orders", vendorOrders);
-      model.Add("Vendor", foundVendor);
+      List<Order> vendorOrder = foundVendor.Orders;
+      model.Add("order", vendorOrder);
+      model.Add("vendor", foundVendor);
       return View("Show", model);
     }
   }

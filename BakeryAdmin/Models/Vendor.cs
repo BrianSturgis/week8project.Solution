@@ -10,7 +10,6 @@ namespace BakeryAdmin.Models
     public int Id { get; set; }
 
 
-
     public List<Order> Orders { get; set; }
 
     public Vendor(string name, string description)
@@ -36,8 +35,6 @@ namespace BakeryAdmin.Models
     {
       return _instances[searchId - 1];
     }
-
-
     public void AddOrder(Order order)
     {
       Orders.Add(order);
