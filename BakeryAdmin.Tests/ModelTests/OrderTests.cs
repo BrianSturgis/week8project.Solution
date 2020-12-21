@@ -88,6 +88,20 @@ namespace BakeryAdmin.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      
+      Order newOrder1 = new Order("1","1","1","1");
+      Order newOrder2 = new Order("1","1","1","1");
+
+      //Act
+      Order result = Order.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
     
   }
 }
