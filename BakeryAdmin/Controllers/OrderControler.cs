@@ -13,7 +13,7 @@ namespace BakeryAdmin.Controllers
       return View(vendor);
     }
 
-    [HttpGet("/Vendors/{vendorId}/order/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/order/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Order order = Order.Find(orderId);
