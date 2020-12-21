@@ -9,7 +9,7 @@ namespace BakeryAdmin.Models
     public string Description { get; set; }
     public int Id { get; set; }
 
-    
+
 
     public List<Order> Orders { get; set; }
 
@@ -42,5 +42,5 @@ namespace BakeryAdmin.Models
     {
       Orders.Add(order);
     }
-}
+  }
 }
